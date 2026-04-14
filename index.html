@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PAWE attaches to any manual wheelchair and makes it electric in 10 seconds. No new chair. No tools. No help needed.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/components.css">
+  <link rel="stylesheet" href="/home.css">
+
+  <title>PAWE — Your manual chair. Electric in 10 seconds.</title>
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" role="banner">
+    <div class="container">
+      <nav class="nav__inner" aria-label="Main navigation">
+        <a href="/" class="nav__wordmark" aria-label="PAWE home">P<span>A</span>WE</a>
+        <ul class="nav__links" role="list">
+          <li><a href="/how-it-works.html" class="nav__link">How it works</a></li>
+          <li><a href="/for-providers.html" class="nav__link">For providers</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/waitlist.html" class="btn-primary btn-sm">Join the waitlist</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="hamburger-btn">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="nav__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <a href="/how-it-works.html" class="nav__mobile-link">How it works</a>
+      <a href="/for-providers.html" class="nav__mobile-link">For providers</a>
+      <a href="/about.html" class="nav__mobile-link">About</a>
+      <div class="nav__mobile-cta">
+        <a href="/waitlist.html" class="btn-primary btn-full-mobile">Join the waitlist</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main">
+
+    <!-- SECTION 2 — HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <div class="hero__brand">
+          <h1 class="hero__pawe-title">PAWE</h1>
+          <p class="hero__pawe-sub">Portable Affordable Wheelchair Enhancer</p>
+        </div>
+
+        <div class="hero__mid-spacer"></div>
+
+        <div class="hero__actions">
+          <a href="/waitlist.html" class="btn-primary hero__btn-primary">Join the waitlist</a>
+          <a href="/how-it-works.html" class="btn-secondary hero__btn-ghost">See how it works</a>
+        </div>
+
+        <div class="hero__tagline">
+          <p class="hero__tagline-text">Powering wheelchairs. Empowering lives.</p>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+      <!-- Accessible image reference -->
+      <img
+        src="/assets/images/WheelchairInSunset.png"
+        alt="Wheelchair silhouette against a warm sunset — open road ahead"
+        width="1920" height="1080"
+        loading="eager"
+        style="display:none"
+      >
+    </section>
+
+    <!-- SECTION 3 — PROOF BAR -->
+    <div class="proof-bar" aria-label="Trust signals">
+      <div class="container">
+        <div class="proof-bar__inner">
+          <div class="proof-bar__item">
+            <span class="proof-bar__dot" aria-hidden="true"></span>
+            Patent filed
+          </div>
+          <div class="proof-bar__item">
+            <span class="proof-bar__dot" aria-hidden="true"></span>
+            120+ users interviewed in development
+          </div>
+          <div class="proof-bar__item">
+            <span class="proof-bar__dot" aria-hidden="true"></span>
+            Beta testers active today
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPACT STATEMENT -->
+    <section class="impact" aria-label="Impact statement">
+      <div class="impact__inner">
+
+        <!-- Line 1 -->
+        <p class="impact__make">Make your <span class="impact__manual">Manual Wheelchair</span></p>
+
+        <!-- Line 2 — the animated electric line -->
+        <div class="impact__electric-wrap">
+          <div class="impact__wheel-wrap" aria-hidden="true">
+            <svg class="impact__wheel-svg" viewBox="0 0 36 36"
+                 fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="16"
+                      stroke="white" stroke-width="2.5"/>
+              <circle cx="18" cy="18" r="5" fill="white"/>
+              <line x1="18" y1="2"  x2="18" y2="10"
+                    stroke="white" stroke-width="2"/>
+              <line x1="18" y1="26" x2="18" y2="34"
+                    stroke="white" stroke-width="2"/>
+              <line x1="2"  y1="18" x2="10" y2="18"
+                    stroke="white" stroke-width="2"/>
+              <line x1="26" y1="18" x2="34" y2="18"
+                    stroke="white" stroke-width="2"/>
+              <line x1="6.1"  y1="6.1"  x2="11.8" y2="11.8"
+                    stroke="white" stroke-width="2"/>
+              <line x1="24.2" y1="24.2" x2="29.9" y2="29.9"
+                    stroke="white" stroke-width="2"/>
+              <line x1="29.9" y1="6.1"  x2="24.2" y2="11.8"
+                    stroke="white" stroke-width="2"/>
+              <line x1="11.8" y1="24.2" x2="6.1"  y2="29.9"
+                    stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+
+          <div class="impact__electric-text-wrap">
+            <span class="impact__electric">Electric</span>
+            <div class="impact__ground" aria-hidden="true">
+              <canvas class="impact__ground-canvas"
+                      id="groundCanvas"
+                      height="18"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Line 3 -->
+        <p class="impact__seconds-line">
+          in <strong class="impact__seconds">10 Seconds</strong>
+        </p>
+
+        <!-- Line 4 -->
+        <p class="impact__closing">
+          No new chair. No tools. No one else needed.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4 — HOW IT WORKS (teaser) -->
+    <section class="section" aria-label="How it works">
+      <div class="container">
+        <h2 class="heading-section fade-in">Three steps. Ten seconds.</h2>
+        <div class="hiw">
+          <div class="hiw__steps">
+            <div class="hiw__step is-active fade-in" data-step="0">
+              <span class="step__number">1</span>
+              <h3 class="step__title">Align</h3>
+              <p class="step__desc">Drop PAWE onto your chair's quick-attach poles.</p>
+            </div>
+            <div class="hiw__step fade-in" data-step="1">
+              <span class="step__number">2</span>
+              <h3 class="step__title">Snap</h3>
+              <p class="step__desc">Controller locks in place. No tools. No help needed.</p>
+            </div>
+            <div class="hiw__step fade-in" data-step="2">
+              <span class="step__number">3</span>
+              <h3 class="step__title">Go</h3>
+              <p class="step__desc">Joystick or push-assist. Ready in 10 seconds.</p>
+            </div>
+          </div>
+          <div class="hiw__video-wrap fade-in">
+            <video
+              class="hiw__video"
+              id="hiw-video"
+              src="/assets/Videos/FullHypeVideoDemo.mp4"
+              muted
+              playsinline
+              preload="metadata"
+              width="640"
+              height="360"
+              aria-label="PAWE attachment demo — align, snap, go"
+            ></video>
+            <button class="hiw__play-btn" id="hiw-play-btn" aria-label="Play demo video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="23" stroke="white" stroke-width="2"/>
+                <polygon points="19,14 19,34 35,24" fill="white"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="steps__link">
+          <a href="/how-it-works.html" class="btn-secondary btn-sm">See the full setup process &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — TESTIMONIALS -->
+    <section class="section testimonials-section" aria-label="User testimonials">
+      <div class="container">
+        <div class="testimonials fade-in">
+          <blockquote class="testimonial-card">
+            <p class="testimonial-card__text">"My sister can get around on her own now — outdoors, at our temple, everywhere."</p>
+            <footer class="testimonial-card__attr">— Beta user family member</footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p class="testimonial-card__text">"My father could finally leave his senior living home on his own — no accessible vehicle, no waiting on anyone."</p>
+            <footer class="testimonial-card__attr">— Beta user family member</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — STAT CALLOUTS -->
+    <section class="section" aria-label="Key specifications">
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__value">10 sec</div>
+            <p class="stat__label">Re-attach time after first setup</p>
+          </div>
+          <div class="stat">
+            <div class="stat__value">13 lbs</div>
+            <p class="stat__label">Weight of the attachment</p>
+          </div>
+          <div class="stat">
+            <div class="stat__value">10 mi</div>
+            <p class="stat__label">Average range per charge</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — AFFORDABILITY -->
+    <section class="section" aria-label="Affordability">
+      <div class="container affordability">
+        <h2 class="heading-section fade-in">Electric mobility. Without the electric wheelchair price tag.</h2>
+        <div class="affordability__body fade-in">
+          <p>Power wheelchairs cost $5,000–$30,000 and require specialized vehicles to transport. PAWE attaches to the chair you already own — the one that fits your body, your car, and your life.</p>
+          <p>A hot-swap battery means no downtime. When one runs out, click in a fresh one and keep moving.</p>
+        </div>
+        <a href="#waitlist" class="btn-primary">Join the waitlist</a>
+      </div>
+    </section>
+
+    <!-- SECTION 9 — FINAL CTA / WAITLIST FORM -->
+    <section class="section waitlist-section" id="waitlist" aria-label="Join the waitlist">
+      <div class="container">
+        <div class="waitlist-form-wrap fade-in">
+          <h2 class="heading-section">Be first in line.</h2>
+          <p class="waitlist-form-wrap__sub">Join the waitlist and we'll reach out when PAWE is ready — with early access pricing.</p>
+
+          <form id="waitlist-form" class="waitlist-form" novalidate>
+            <div class="form-group">
+              <label for="first_name" class="form-label">First name</label>
+              <input type="text" id="first_name" name="first_name" class="form-input" required autocomplete="given-name">
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="chair_model" class="form-label form-label--optional">Chair model or type</label>
+              <input type="text" id="chair_model" name="chair_model" class="form-input" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="referral_source" class="form-label form-label--optional">How did you hear about us?</label>
+              <input type="text" id="referral_source" name="referral_source" class="form-input" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn-primary btn-full-mobile" id="waitlist-submit">Join the waitlist</button>
+
+            <p class="waitlist-form__error" id="waitlist-error" role="alert" aria-live="polite"></p>
+            <p class="waitlist-form__fine">No spam. No commitment. Early access pricing when we launch.</p>
+          </form>
+
+          <div class="waitlist-success" id="waitlist-success" hidden>
+            <h3 class="heading-section">You're on the list.</h3>
+            <p class="waitlist-success__sub">We'll be in touch when PAWE launches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__wordmark">P<span>A</span>WE</div>
+          <p class="footer__tagline">Independence shouldn't have a price tag.</p>
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <a href="/how-it-works.html" class="footer__link">How it works</a>
+            <a href="/for-providers.html" class="footer__link">For providers</a>
+            <a href="/about.html" class="footer__link">About</a>
+            <a href="/waitlist.html" class="footer__link">Waitlist</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>&copy; 2025 Technotonin Industries LLC. All rights reserved. &nbsp;&middot;&nbsp;
+        <a href="/privacy.html" class="footer__link">Privacy Policy</a> &nbsp;&middot;&nbsp;
+        <a href="/terms.html" class="footer__link">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JS — Core UI (no external dependencies) ===== -->
+  <script>
+    // Hamburger menu
+    const btn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', false);
+        btn.setAttribute('aria-label', 'Open menu');
+      });
+    });
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      fadeEls.forEach(el => observer.observe(el));
+    } else {
+      // Fallback: show everything immediately
+      fadeEls.forEach(el => el.classList.add('visible'));
+    }
+  </script>
+
+  <!-- Supabase SDK — loaded async so it never blocks page rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+
+  <!-- ===== JS — Waitlist form (depends on Supabase) ===== -->
+  <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('waitlist-form');
+      const submitBtn = document.getElementById('waitlist-submit');
+      const errorEl = document.getElementById('waitlist-error');
+      const successEl = document.getElementById('waitlist-success');
+
+      let sb = null;
+
+      function getSupabase() {
+        if (sb) return sb;
+        if (window.supabase) {
+          sb = window.supabase.createClient(
+            'https://ljhhaoqiobgslncwupjz.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxqaGhhb3Fpb2Jnc2xuY3d1cGp6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1MTc4MDEsImV4cCI6MjA5MTA5MzgwMX0.lssRH7aw2_jy-T1IwPTvCkZJE-t9kYMmFEvwRZr6qiY'
+          );
+        }
+        return sb;
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        errorEl.textContent = '';
+
+        const firstName = form.first_name.value.trim();
+        const email = form.email.value.trim();
+
+        if (!firstName || !email) {
+          errorEl.textContent = 'Please fill in your name and email.';
+          return;
+        }
+
+        const client = getSupabase();
+        if (!client) {
+          errorEl.textContent = 'Still loading — please try again in a moment.';
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Joining...';
+
+        const { error } = await client.from('waitlist').insert({
+          first_name: firstName,
+          email: email,
+          chair_model: form.chair_model.value.trim() || null,
+          referral_source: form.referral_source.value.trim() || null,
+        });
+
+        if (error) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Join the waitlist';
+          errorEl.textContent = 'Something went wrong. Please try again.';
+          return;
+        }
+
+        form.hidden = true;
+        successEl.hidden = false;
+      });
+    });
+  </script>
+
+  <!-- Video-synced how-it-works steps -->
+  <script>
+  (function() {
+    const video = document.getElementById('hiw-video');
+    const playBtn = document.getElementById('hiw-play-btn');
+    const steps = document.querySelectorAll('.hiw__step');
+    if (!video || !playBtn || !steps.length) return;
+
+    const ranges = [
+      { start: 0,  end: 7  },
+      { start: 7,  end: 14 },
+      { start: 14, end: 20 }
+    ];
+
+    playBtn.addEventListener('click', function() {
+      video.play();
+      playBtn.hidden = true;
+    });
+
+    video.addEventListener('ended', function() {
+      playBtn.hidden = false;
+      setActive(0);
+    });
+
+    function setActive(index) {
+      steps.forEach(function(s, i) {
+        s.classList.toggle('is-active', i === index);
+      });
+    }
+
+    video.addEventListener('timeupdate', function() {
+      const t = video.currentTime;
+      for (var i = ranges.length - 1; i >= 0; i--) {
+        if (t >= ranges[i].start) {
+          setActive(i);
+          break;
+        }
+      }
+    });
+  })();
+  </script>
+
+  <!-- Ground canvas animation for impact section -->
+  <script>
+  (function() {
+    const canvas = document.getElementById('groundCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const query = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (query.matches) return;
+
+    let W = 0;
+    let offset = 0;
+    const SPEED = 3;
+    const GROUND_Y = 14;
+    const BUMP_W = 18;
+    const BUMP_H = 4;
+    const COLOR = 'rgba(0, 153, 204, 0.7)';
+
+    function resize() {
+      W = canvas.offsetWidth;
+      canvas.width = W;
+      canvas.height = 18;
+    }
+
+    function buildTerrain(seed) {
+      const pts = [];
+      let x = 0;
+      while (x < W + BUMP_W * 4) {
+        const flat = Math.floor(((seed * x * 0.3 + 7) % 3) + 1) * BUMP_W;
+        pts.push({ x, type: 'flat', w: flat });
+        x += flat;
+        const bumpW = BUMP_W + Math.floor(((seed * x * 0.7 + 3) % 3)) * 6;
+        pts.push({ x, type: 'bump', w: bumpW });
+        x += bumpW;
+      }
+      return pts;
+    }
+
+    const terrain = buildTerrain(42);
+    const totalW = terrain.reduce((s, p) => s + p.w, 0);
+
+    function drawFrame() {
+      ctx.clearRect(0, 0, W, 18);
+      ctx.beginPath();
+      ctx.moveTo(0, GROUND_Y);
+
+      let drawX = -((offset % totalW));
+      for (let rep = 0; rep < 3; rep++) {
+        for (const seg of terrain) {
+          if (seg.type === 'flat') {
+            ctx.lineTo(drawX + seg.w, GROUND_Y);
+          } else {
+            const mid = drawX + seg.w / 2;
+            ctx.quadraticCurveTo(mid, GROUND_Y - BUMP_H, drawX + seg.w, GROUND_Y);
+          }
+          drawX += seg.w;
+        }
+      }
+
+      ctx.lineTo(W, GROUND_Y);
+      ctx.strokeStyle = COLOR;
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+    }
+
+    let raf;
+    function loop() {
+      offset += SPEED;
+      drawFrame();
+      raf = requestAnimationFrame(loop);
+    }
+
+    function init() {
+      resize();
+      loop();
+    }
+
+    window.addEventListener('resize', function() {
+      resize();
+    });
+
+    if (document.readyState === 'complete') {
+      init();
+    } else {
+      window.addEventListener('load', init);
+    }
+  })();
+  </script>
+
+</body>
+</html>

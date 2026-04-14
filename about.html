@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The story behind PAWE — why we're building a portable, affordable power attachment for manual wheelchairs.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/components.css">
+
+  <title>About — PAWE</title>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="nav" role="banner">
+    <div class="container">
+      <nav class="nav__inner" aria-label="Main navigation">
+        <a href="/" class="nav__wordmark" aria-label="PAWE home">P<span>A</span>WE</a>
+        <ul class="nav__links" role="list">
+          <li><a href="/how-it-works.html" class="nav__link">How it works</a></li>
+          <li><a href="/for-providers.html" class="nav__link">For providers</a></li>
+          <li><a href="/about.html" class="nav__link nav__link--active">About</a></li>
+          <li><a href="/waitlist.html" class="btn-primary btn-sm">Join the waitlist</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="hamburger-btn">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="nav__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <a href="/how-it-works.html" class="nav__mobile-link">How it works</a>
+      <a href="/for-providers.html" class="nav__mobile-link">For providers</a>
+      <a href="/about.html" class="nav__mobile-link">About</a>
+      <div class="nav__mobile-cta">
+        <a href="/waitlist.html" class="btn-primary btn-full-mobile">Join the waitlist</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Content will be built section by section -->
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__wordmark">P<span>A</span>WE</div>
+          <p class="footer__tagline">Independence shouldn't have a price tag.</p>
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <a href="/how-it-works.html" class="footer__link">How it works</a>
+            <a href="/for-providers.html" class="footer__link">For providers</a>
+            <a href="/about.html" class="footer__link">About</a>
+            <a href="/waitlist.html" class="footer__link">Waitlist</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>&copy; 2025 Technotonin Industries LLC. All rights reserved. &nbsp;&middot;&nbsp;
+        <a href="/privacy.html" class="footer__link">Privacy Policy</a> &nbsp;&middot;&nbsp;
+        <a href="/terms.html" class="footer__link">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', false);
+        btn.setAttribute('aria-label', 'Open menu');
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

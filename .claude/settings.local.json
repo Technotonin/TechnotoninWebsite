@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx -y serve . -p 3000)",
+      "Bash(python3 -m http.server 3000)",
+      "Bash(python3 -m http.server 8000)"
+    ]
+  }
+}
