@@ -1,0 +1,401 @@
+/* ============================================================
+   PAWE — Waitlist page styles
+   Page-specific styles only. Tokens come from styles.css.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. NAV — minimal (wordmark only)
+   ------------------------------------------------------------ */
+.nav--minimal .nav__inner {
+  justify-content: flex-start;
+}
+
+/* Push main content below the fixed nav */
+.waitlist-main {
+  padding-top: 64px;
+  background-color: var(--color-paper);
+}
+
+/* ------------------------------------------------------------
+   2. HERO STATEMENT
+   ------------------------------------------------------------ */
+.wl-hero {
+  padding: var(--space-16) var(--space-6) var(--space-8);
+  background-color: var(--color-paper);
+}
+
+@media (min-width: 768px) {
+  .wl-hero {
+    padding: var(--space-24) var(--space-8) var(--space-12);
+  }
+}
+
+.wl-hero__inner {
+  max-width: 680px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.wl-hero__eyebrow {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.wl-hero__headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .wl-hero__headline {
+    font-size: 4rem;
+  }
+}
+
+.wl-hero__sub {
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.wl-hero__count {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-accent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.wl-hero__count.is-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wl-hero__count {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   3. THE FORM
+   ------------------------------------------------------------ */
+.wl-form-section {
+  padding: var(--space-8) var(--space-6) var(--space-16);
+  background-color: var(--color-paper);
+}
+
+@media (min-width: 768px) {
+  .wl-form-section {
+    padding: var(--space-12) var(--space-8) var(--space-24);
+  }
+}
+
+.wl-form-wrap {
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+/* Benefit list */
+.wl-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.wl-benefits__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+
+.wl-benefits__check {
+  flex-shrink: 0;
+  color: var(--color-accent);
+  margin-top: 2px;
+}
+
+/* Form */
+.wl-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.wl-form .form-group + .form-group {
+  margin-top: 0;
+}
+
+.wl-form__help {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: var(--space-1);
+  line-height: 1.4;
+}
+
+.wl-form__submit {
+  width: 100%;
+  min-height: 56px;
+  margin-top: var(--space-4);
+  padding: 0 var(--space-6);
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.wl-form__submit:hover {
+  background-color: #cf6908;
+  border-color: #cf6908;
+}
+
+.wl-form__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.wl-form__error {
+  font-size: var(--text-sm);
+  color: var(--color-error);
+  text-align: center;
+  min-height: 1em;
+}
+
+.wl-form__error:empty {
+  display: none;
+}
+
+.wl-form__fine {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Success state */
+.wl-success {
+  text-align: center;
+  padding: var(--space-8) 0;
+}
+
+.wl-success__check {
+  color: var(--color-accent);
+  margin: 0 auto var(--space-4);
+  display: block;
+}
+
+.wl-success__headline {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  margin-bottom: var(--space-3);
+}
+
+.wl-success__sub {
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+  line-height: 1.6;
+  max-width: 420px;
+  margin: 0 auto var(--space-12);
+}
+
+/* Share block */
+.wl-share__prompt {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+.wl-share__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+@media (min-width: 480px) {
+  .wl-share__buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.wl-share__btn {
+  gap: var(--space-2);
+  min-height: 44px;
+}
+
+/* ------------------------------------------------------------
+   4. URGENCY AND TRUST BLOCK
+   ------------------------------------------------------------ */
+.wl-trust {
+  padding: var(--space-8) var(--space-6) var(--space-12);
+  background-color: var(--color-paper);
+}
+
+@media (min-width: 768px) {
+  .wl-trust {
+    padding: var(--space-12) var(--space-8) var(--space-16);
+  }
+}
+
+.wl-trust__inner {
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.wl-trust__signals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .wl-trust__signals {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+  }
+}
+
+.wl-trust__signal {
+  flex: 1;
+  padding: 0 var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .wl-trust__signal + .wl-trust__signal {
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+.wl-trust__value {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+}
+
+.wl-trust__label {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.wl-trust__disclaimer {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  line-height: 1.6;
+  text-align: center;
+  max-width: 480px;
+  margin: var(--space-12) auto 0;
+}
+
+/* ------------------------------------------------------------
+   5. ONE QUOTE
+   ------------------------------------------------------------ */
+.wl-quote {
+  padding: var(--space-8) var(--space-6) var(--space-16);
+  background-color: var(--color-paper);
+}
+
+@media (min-width: 768px) {
+  .wl-quote {
+    padding: var(--space-12) var(--space-8) var(--space-24);
+  }
+}
+
+.wl-quote__inner {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* Mirror of .testimonial-card from home.css so this page doesn't
+   need to import home-only styles. */
+.testimonial-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-4);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.testimonial-card__text {
+  font-size: var(--text-base);
+  font-style: italic;
+  color: var(--color-ink);
+  line-height: 1.6;
+  margin-top: var(--space-4);
+}
+
+.testimonial-card__attr {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-top: var(--space-4);
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------
+   6. FOOTER — minimal (legal line only)
+   ------------------------------------------------------------ */
+.wl-footer {
+  background-color: var(--color-ink);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+}
+
+.wl-footer__legal {
+  font-size: var(--text-xs);
+  color: rgba(245, 244, 240, 0.5);
+  line-height: 1.6;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.wl-footer__link {
+  color: rgba(245, 244, 240, 0.7);
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.wl-footer__link:hover {
+  color: var(--color-paper);
+}

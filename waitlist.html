@@ -3,94 +3,338 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Join the PAWE waitlist. Be the first to know when our portable wheelchair power attachment is available.">
+  <meta name="description" content="Join the PAWE waitlist. Be first in line for early access and pricing when our portable wheelchair power attachment launches.">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/components.css">
+  <link rel="stylesheet" href="/waitlist.css">
 
-  <title>Join the Waitlist — PAWE</title>
+  <title>Join the waitlist — PAWE</title>
 </head>
 <body>
 
+  <!-- Skip to content -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="nav" role="banner">
+  <!-- ===== NAVIGATION — minimal: wordmark only ===== -->
+  <header class="nav nav--minimal" role="banner">
     <div class="container">
       <nav class="nav__inner" aria-label="Main navigation">
-        <a href="/" class="nav__wordmark" aria-label="PAWE home">P<span>A</span>WE</a>
-        <ul class="nav__links" role="list">
-          <li><a href="/how-it-works.html" class="nav__link">How it works</a></li>
-          <li><a href="/for-providers.html" class="nav__link">For providers</a></li>
-          <li><a href="/about.html" class="nav__link">About</a></li>
-          <li><a href="/waitlist.html" class="btn-primary btn-sm nav__link--active">Join the waitlist</a></li>
-        </ul>
-        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="hamburger-btn">
-          <span></span><span></span><span></span>
-        </button>
+        <a href="/index.html" class="nav__wordmark" aria-label="PAWE home">P<span>A</span>WE</a>
       </nav>
-    </div>
-    <div class="nav__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
-      <a href="/how-it-works.html" class="nav__mobile-link">How it works</a>
-      <a href="/for-providers.html" class="nav__mobile-link">For providers</a>
-      <a href="/about.html" class="nav__mobile-link">About</a>
-      <div class="nav__mobile-cta">
-        <a href="/waitlist.html" class="btn-primary btn-full-mobile">Join the waitlist</a>
-      </div>
     </div>
   </header>
 
-  <main id="main">
-    <!-- Content will be built section by section -->
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main" class="waitlist-main">
+
+    <!-- SECTION 2 — HERO STATEMENT -->
+    <section class="wl-hero" aria-label="Early access">
+      <div class="wl-hero__inner">
+        <p class="wl-hero__eyebrow">Early access</p>
+        <h1 class="wl-hero__headline">Be among the first.</h1>
+        <p class="wl-hero__sub">
+          PAWE is converting manual wheelchairs to electric in 10 seconds.
+          We're building our launch list now — join early and you'll be first
+          in line for access and early pricing.
+        </p>
+        <p class="wl-hero__count" id="wl-count" hidden aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — THE FORM -->
+    <section class="wl-form-section" aria-label="Waitlist signup form">
+      <div class="wl-form-wrap">
+
+        <!-- Benefit list -->
+        <ul class="wl-benefits" role="list">
+          <li class="wl-benefits__item">
+            <svg class="wl-benefits__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>First access when PAWE launches in your area</span>
+          </li>
+          <li class="wl-benefits__item">
+            <svg class="wl-benefits__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Early access pricing — before public release</span>
+          </li>
+          <li class="wl-benefits__item">
+            <svg class="wl-benefits__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Direct line to the team during beta</span>
+          </li>
+        </ul>
+
+        <!-- Form -->
+        <form id="wl-form" class="wl-form" novalidate>
+          <div class="form-group">
+            <label for="first_name" class="form-label">First name</label>
+            <input type="text" id="first_name" name="first_name" class="form-input" required autocomplete="given-name">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="chair_model" class="form-label form-label--optional">Chair model or type</label>
+            <input
+              type="text"
+              id="chair_model"
+              name="chair_model"
+              class="form-input"
+              placeholder="e.g. Quickie Q50, TiLite TR, standard folding"
+              aria-describedby="chair_model_help"
+              autocomplete="off"
+            >
+            <p id="chair_model_help" class="wl-form__help">
+              Helps us confirm compatibility with your specific chair
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="referral_source" class="form-label form-label--optional">How did you hear about us?</label>
+            <input type="text" id="referral_source" name="referral_source" class="form-input" autocomplete="off">
+          </div>
+
+          <button type="submit" class="wl-form__submit" id="wl-submit">Claim my spot</button>
+
+          <p class="wl-form__error" id="wl-error" role="alert" aria-live="polite"></p>
+          <p class="wl-form__fine">No spam. No commitment. Unsubscribe anytime.</p>
+          <p class="wl-form__fine">We will never share your information.</p>
+        </form>
+
+        <!-- Success state -->
+        <div class="wl-success" id="wl-success" hidden>
+          <svg class="wl-success__check" width="72" height="72" viewBox="0 0 72 72" fill="none" aria-hidden="true">
+            <circle cx="36" cy="36" r="34" stroke="currentColor" stroke-width="3"/>
+            <path d="M22 37l10 10 20-22" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2 class="wl-success__headline">You're on the list.</h2>
+          <p class="wl-success__sub">
+            We'll reach out personally when PAWE is ready to come to you.
+          </p>
+
+          <div class="wl-share">
+            <p class="wl-share__prompt">Know someone who uses a manual wheelchair?</p>
+            <div class="wl-share__buttons">
+              <a
+                id="wl-share-x"
+                class="btn-secondary wl-share__btn"
+                href="https://twitter.com/intent/tweet?text=Just%20joined%20the%20waitlist%20for%20PAWE%20%E2%80%94%20a%20power%20attachment%20that%20makes%20any%20manual%20wheelchair%20electric%20in%2010%20seconds.%20No%20new%20chair%20needed.%20pawe.com%2Fwaitlist"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span>Share on X</span>
+              </a>
+              <button
+                type="button"
+                id="wl-share-copy"
+                class="btn-secondary wl-share__btn"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1 1"/>
+                  <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1-1"/>
+                </svg>
+                <span id="wl-share-copy-label">Copy link</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4 — URGENCY AND TRUST BLOCK -->
+    <section class="wl-trust" aria-label="Trust signals">
+      <div class="wl-trust__inner">
+        <ul class="wl-trust__signals" role="list">
+          <li class="wl-trust__signal">
+            <div class="wl-trust__value">120+</div>
+            <p class="wl-trust__label">Wheelchair users who shaped this product</p>
+          </li>
+          <li class="wl-trust__signal">
+            <div class="wl-trust__value">Patent Filed</div>
+            <p class="wl-trust__label">Application no. 20240277539</p>
+          </li>
+          <li class="wl-trust__signal">
+            <div class="wl-trust__value">Seed Funded</div>
+            <p class="wl-trust__label">Backed and actively building</p>
+          </li>
+        </ul>
+
+        <p class="wl-trust__disclaimer">
+          PAWE is pre-clearance. We describe what the product does — not what
+          it will do for your health.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — ONE QUOTE -->
+    <section class="wl-quote" aria-label="Testimonial">
+      <div class="wl-quote__inner">
+        <blockquote class="testimonial-card fade-in">
+          <p class="testimonial-card__text">
+            "My father could finally leave his senior living home on his own
+            — no accessible vehicle, no waiting on anyone."
+          </p>
+          <footer class="testimonial-card__attr">— Beta user family member</footer>
+        </blockquote>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__inner">
-        <div>
-          <div class="footer__wordmark">P<span>A</span>WE</div>
-          <p class="footer__tagline">Independence shouldn't have a price tag.</p>
-          <nav class="footer__nav" aria-label="Footer navigation">
-            <a href="/how-it-works.html" class="footer__link">How it works</a>
-            <a href="/for-providers.html" class="footer__link">For providers</a>
-            <a href="/about.html" class="footer__link">About</a>
-            <a href="/waitlist.html" class="footer__link">Waitlist</a>
-          </nav>
-        </div>
-      </div>
-      <div class="footer__legal">
-        <p>&copy; 2025 Technotonin Industries LLC. All rights reserved. &nbsp;&middot;&nbsp;
-        <a href="/privacy.html" class="footer__link">Privacy Policy</a> &nbsp;&middot;&nbsp;
-        <a href="/terms.html" class="footer__link">Terms</a></p>
-      </div>
-    </div>
-  </footer>
+  <!-- Supabase SDK — used for live count + form submission -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 
-  <script>
-    const btn = document.getElementById('hamburger-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', isOpen);
-      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  <!-- Supabase client + page interactions -->
+  <script defer>
+    const SUPABASE_URL = 'https://ljhhaoqiobgslncwupjz.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxqaGhhb3Fpb2Jnc2xuY3d1cGp6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1MTc4MDEsImV4cCI6MjA5MTA5MzgwMX0.lssRH7aw2_jy-T1IwPTvCkZJE-t9kYMmFEvwRZr6qiY';
+
+    let _sb = null;
+    function getSupabase() {
+      if (_sb) return _sb;
+      if (window.supabase) {
+        _sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+      }
+      return _sb;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      // ----- Live signup counter (fails silently) -----
+      (async () => {
+        const countEl = document.getElementById('wl-count');
+        if (!countEl) return;
+        try {
+          const sb = getSupabase();
+          if (!sb) return;
+          const { count, error } = await sb
+            .from('waitlist')
+            .select('*', { count: 'exact', head: true });
+          if (error || !count || count <= 0) return;
+          countEl.textContent = `Join ${count.toLocaleString()} others already on the list.`;
+          countEl.hidden = false;
+          requestAnimationFrame(() => countEl.classList.add('is-visible'));
+        } catch (_) { /* silent */ }
+      })();
+
+      // ----- Form submission -----
+      const form = document.getElementById('wl-form');
+      const submitBtn = document.getElementById('wl-submit');
+      const errorEl = document.getElementById('wl-error');
+      const successEl = document.getElementById('wl-success');
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          errorEl.textContent = '';
+
+          const firstName = form.first_name.value.trim();
+          const email = form.email.value.trim();
+
+          if (!firstName || !email) {
+            errorEl.textContent = 'Please fill in your name and email.';
+            return;
+          }
+
+          const sb = getSupabase();
+          if (!sb) {
+            errorEl.textContent = 'Still loading — please try again in a moment.';
+            return;
+          }
+
+          submitBtn.disabled = true;
+          const originalLabel = submitBtn.textContent;
+          submitBtn.textContent = 'Securing your spot...';
+
+          const { error } = await sb.from('waitlist').insert({
+            first_name: firstName,
+            email: email,
+            chair_model: form.chair_model.value.trim() || null,
+            referral_source: form.referral_source.value.trim() || null,
+          });
+
+          if (error) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+            errorEl.textContent = 'Something went wrong. Please try again.';
+            return;
+          }
+
+          form.hidden = true;
+          successEl.hidden = false;
+        });
+      }
+
+      // ----- Fade-in observer -----
+      const fadeEls = document.querySelectorAll('.fade-in');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        fadeEls.forEach(el => observer.observe(el));
+      } else {
+        fadeEls.forEach(el => el.classList.add('visible'));
+      }
+
+      // ----- Copy link share button -----
+      const copyBtn = document.getElementById('wl-share-copy');
+      const copyLabel = document.getElementById('wl-share-copy-label');
+      if (copyBtn && copyLabel) {
+        copyBtn.addEventListener('click', async () => {
+          const url = 'https://pawe.com/waitlist';
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(url);
+            } else {
+              const ta = document.createElement('textarea');
+              ta.value = url;
+              ta.setAttribute('readonly', '');
+              ta.style.position = 'absolute';
+              ta.style.left = '-9999px';
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand('copy');
+              document.body.removeChild(ta);
+            }
+            const original = copyLabel.textContent;
+            copyLabel.textContent = 'Copied!';
+            setTimeout(() => { copyLabel.textContent = original; }, 2000);
+          } catch (_) { /* silent */ }
+        });
+      }
     });
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', false);
-        btn.setAttribute('aria-label', 'Open menu');
-      });
-    });
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
+
+  <!-- ===== FOOTER — minimal: legal line only ===== -->
+  <footer class="wl-footer" role="contentinfo">
+    <p class="wl-footer__legal">
+      &copy; 2025 Technotonin Industries LLC &nbsp;&middot;&nbsp;
+      <a href="/privacy.html" class="wl-footer__link">Privacy Policy</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/terms.html" class="wl-footer__link">Terms</a>
+    </p>
+  </footer>
 
 </body>
 </html>

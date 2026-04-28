@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/assets/images/WheelchairInSunset.png');
+  background-image: url('/assets/images/hero-wheelchair-sunset.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -404,14 +404,11 @@
   font-size: var(--text-base);
   color: var(--color-muted);
   line-height: 1.6;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
 }
 
 .hiw__step.is-active .step__desc {
-  max-height: 100px;
   opacity: 1;
 }
 
@@ -504,6 +501,26 @@
   font-style: normal;
 }
 
+
+/* --- Stats dark variant --- */
+.stats-section {
+  background-color: var(--color-ink);
+  padding-block: var(--space-12);
+}
+
+.stats--dark {
+  border-top: none;
+  border-bottom: none;
+  text-align: center;
+}
+
+.stats--dark .stat__value {
+  color: var(--color-paper);
+}
+
+.stats--dark .stat__label {
+  color: rgba(245, 244, 240, 0.5);
+}
 
 /* --- Affordability --- */
 .affordability {

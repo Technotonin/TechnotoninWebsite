@@ -1,0 +1,348 @@
+/* ============================================================
+   PAWE — About Page Styles
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   STORY (Why we built PAWE)
+   ------------------------------------------------------------ */
+.about-story {
+  background-color: var(--color-paper);
+}
+
+.about-story__inner {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.about-story__copy {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+/* ------------------------------------------------------------
+   MENTORS — "Technotonin Family" tagline
+   ------------------------------------------------------------ */
+.about-mentors__family {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-muted);
+  max-width: 640px;
+  margin-inline: auto;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------
+   ORIGIN — copy column
+   ------------------------------------------------------------ */
+.about-origin__copy {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+.about-origin__copy p {
+  margin: 0;
+}
+
+/* ------------------------------------------------------------
+   1. HERO / MISSION
+   ------------------------------------------------------------ */
+.about-hero {
+  position: relative;
+  padding-block: calc(var(--space-16) + 64px) var(--space-12);
+  min-height: 33.33vw; /* shows only the top half of the 1080x720 image */
+  background-image:
+    linear-gradient(rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.55)),
+    url('/assets/images/AboutUsPagePicture.jpg');
+  background-size: 100% auto, 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: var(--color-paper);
+  isolation: isolate;
+}
+
+.about-hero__inner {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.about-hero .heading-hero {
+  color: var(--color-paper);
+}
+
+.about-hero__lead {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--color-paper);
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.about-hero__sub {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  max-width: 640px;
+  margin-inline: auto;
+  color: rgba(245, 244, 240, 0.8);
+}
+
+.about-hero .badge {
+  background-color: rgba(245, 244, 240, 0.15);
+  color: var(--color-paper);
+  border: 1px solid rgba(245, 244, 240, 0.25);
+}
+
+@media (min-width: 768px) {
+  .about-hero {
+    padding-block: calc(var(--space-24) + 64px) var(--space-16);
+    min-height: 33.33vw;
+  }
+
+  .about-hero__lead {
+    font-size: var(--text-xl);
+  }
+}
+
+/* ------------------------------------------------------------
+   2. STATS BAR
+   ------------------------------------------------------------ */
+.about-stats {
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-stats__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-stats__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about-stat__value {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.about-stat__label {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-top: var(--space-2);
+}
+
+/* ------------------------------------------------------------
+   3. TEAM
+   ------------------------------------------------------------ */
+.about-team__header {
+  max-width: 560px;
+  margin-inline: auto;
+  margin-bottom: var(--space-12);
+}
+
+.about-team__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .about-team__grid--two {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  .about-team__grid--three {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+}
+
+.team-member__photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-border);
+}
+
+.team-member__name {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+.team-member__role {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+/* ------------------------------------------------------------
+   4. MENTORS
+   ------------------------------------------------------------ */
+.about-mentors__label {
+  font-size: var(--text-xl);
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+/* Mentors: flex layout so the last row (any count) centers naturally */
+.about-mentors__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-6);
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.about-mentors__grid .mentor-card {
+  flex: 0 1 calc((100% - var(--space-6)) / 2);
+  max-width: 200px;
+}
+
+@media (min-width: 768px) {
+  .about-mentors__grid {
+    gap: var(--space-8);
+  }
+
+  .about-mentors__grid .mentor-card {
+    flex: 0 1 calc((100% - 2 * var(--space-8)) / 3);
+    max-width: 200px;
+  }
+}
+
+.mentor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+}
+
+.mentor-card__photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-border);
+}
+
+.mentor-card__name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+.mentor-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+/* ------------------------------------------------------------
+   5. NAME ORIGIN
+   ------------------------------------------------------------ */
+.about-origin__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-origin__inner {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
+.about-origin__wordmark {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.about-origin__wordmark span {
+  color: var(--color-accent);
+}
+
+.about-origin__equation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .about-origin__equation {
+    justify-content: flex-start;
+  }
+}
+
+.about-origin__term {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-accent2);
+  padding: var(--space-2) var(--space-4);
+  background-color: rgba(0, 153, 204, 0.08);
+  border-radius: var(--radius-pill);
+}
+
+.about-origin__plus {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-muted);
+}
+
+/* ------------------------------------------------------------
+   6. CTA
+   ------------------------------------------------------------ */
+.about-cta {
+  text-align: center;
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.about-cta h2 {
+  color: var(--color-paper);
+}
+
+.about-cta p {
+  color: rgba(245, 244, 240, 0.7);
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.about-cta .btn-primary {
+  margin-top: var(--space-6);
+}
