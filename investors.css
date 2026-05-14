@@ -1,0 +1,712 @@
+/* ============================================================
+   PAWE — Investors Page
+   Page-specific styles only. Tokens & components live in
+   styles.css and components.css.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Shared label style
+   ------------------------------------------------------------ */
+.inv-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-6);
+}
+
+.inv-label--blue {
+  color: var(--color-accent2);
+}
+
+/* ============================================================
+   SECTION 2 — HERO
+   ============================================================ */
+.inv-hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-24) var(--space-6);
+  text-align: center;
+}
+
+.inv-hero__inner {
+  max-width: 800px;
+  width: 100%;
+}
+
+.inv-hero__headline {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .inv-hero__headline {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .inv-hero__headline {
+    font-size: 5rem;
+  }
+}
+
+.inv-hero__sub {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .inv-hero__sub {
+    font-size: var(--text-xl);
+  }
+}
+
+.inv-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+}
+
+/* Hero primary — white bg, accent text */
+.inv-hero__cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: var(--color-accent);
+  border: 2px solid #fff;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  min-height: 52px;
+  padding: 0 var(--space-8);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.inv-hero__cta-primary:hover {
+  background-color: var(--color-paper);
+  border-color: var(--color-paper);
+}
+
+/* Hero secondary — transparent / white outline */
+.inv-hero__cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  min-height: 52px;
+  padding: 0 var(--space-8);
+  transition: border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.inv-hero__cta-secondary:hover {
+  border-color: #fff;
+}
+
+/* Scroll chevron */
+.inv-hero__scroll {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .inv-hero__scroll {
+    animation: inv-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes inv-bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50%      { transform: translate(-50%, 8px); }
+  }
+}
+
+/* ============================================================
+   SECTION 3 — THE PROBLEM
+   ============================================================ */
+.inv-problem {
+  background-color: var(--color-paper);
+  padding: var(--space-24) var(--space-6);
+}
+
+.inv-problem__inner {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.inv-problem__headline {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .inv-problem__headline {
+    font-size: var(--text-4xl);
+  }
+}
+
+.inv-problem__rows {
+  margin-top: var(--space-12);
+}
+
+.inv-problem__row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inv-problem__row:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .inv-problem__row {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-8);
+  }
+}
+
+.inv-problem__stat {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .inv-problem__stat {
+    min-width: 180px;
+  }
+}
+
+.inv-problem__stat--accent {
+  color: var(--color-accent);
+}
+
+.inv-problem__exp {
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   SECTION 4 — THE PRODUCT
+   ============================================================ */
+.inv-product {
+  background-color: var(--color-ink);
+  padding: var(--space-24) var(--space-6);
+}
+
+.inv-product__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  max-width: var(--max-width);
+  margin-inline: auto;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .inv-product__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+}
+
+.inv-product__headline {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .inv-product__headline {
+    font-size: var(--text-4xl);
+  }
+}
+
+.inv-product__facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.inv-fact__title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: #fff;
+}
+
+.inv-fact__body {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  margin-top: var(--space-1);
+}
+
+.inv-product__image {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+/* ============================================================
+   SECTION 5 — TRACTION
+   ============================================================ */
+.inv-traction {
+  background-color: var(--color-paper);
+  padding: var(--space-24) var(--space-6) var(--space-16);
+}
+
+.inv-traction__inner {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.inv-traction__headline {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .inv-traction__headline {
+    font-size: var(--text-4xl);
+  }
+}
+
+.inv-traction__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .inv-traction__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Top row: 3 across (each spans 2 of 6 columns) */
+  .inv-traction__grid > .inv-signal:nth-child(1),
+  .inv-traction__grid > .inv-signal:nth-child(2),
+  .inv-traction__grid > .inv-signal:nth-child(3) {
+    grid-column: span 2;
+  }
+  /* Bottom row: 2 centered (each spans 2, offset by 1 for centering) */
+  .inv-traction__grid > .inv-signal:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .inv-traction__grid > .inv-signal:nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+}
+
+.inv-signal {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.inv-signal__value {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.inv-signal__label {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-top: var(--space-2);
+}
+
+/* ============================================================
+   SECTION 6 — AS SEEN IN
+   ============================================================ */
+.inv-press {
+  background-color: var(--color-paper);
+  padding: var(--space-8) var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.inv-press__inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.inv-press__label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-6);
+}
+
+.inv-press__logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.inv-press__logo {
+  max-height: 36px;
+  width: auto;
+  filter: grayscale(100%) opacity(0.45);
+  transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+.inv-press__logo:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* ============================================================
+   SECTION 7 — TEAM
+   ============================================================ */
+.inv-team {
+  background-color: var(--color-ink);
+  padding: var(--space-24) var(--space-6);
+}
+
+.inv-team__inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.inv-team__headline {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+  max-width: 640px;
+}
+
+@media (min-width: 768px) {
+  .inv-team__headline {
+    font-size: var(--text-4xl);
+  }
+}
+
+.inv-team__sub {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.inv-team__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .inv-team__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+.inv-member__photo,
+.inv-member__initials {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.inv-member__initials {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--text-xl);
+}
+
+.inv-member__name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: #fff;
+  margin-top: var(--space-4);
+}
+
+.inv-member__role {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: var(--space-1);
+}
+
+.inv-member__school {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: var(--space-1);
+}
+
+.inv-member__bio {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  margin-top: var(--space-2);
+  max-width: 320px;
+}
+
+/* Advisor card */
+.inv-advisor {
+  max-width: 400px;
+  margin: var(--space-16) auto 0;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.inv-advisor__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent2);
+  margin-bottom: var(--space-2);
+}
+
+.inv-advisor__name {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: #fff;
+}
+
+.inv-advisor__title {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: var(--space-1);
+}
+
+/* ============================================================
+   SECTION 8 — THE ASK
+   ============================================================ */
+.inv-ask {
+  background-color: var(--color-paper);
+  padding: var(--space-24) var(--space-6);
+}
+
+.inv-ask__inner {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.inv-ask__headline {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .inv-ask__headline {
+    font-size: var(--text-4xl);
+  }
+}
+
+.inv-ask__body {
+  margin-top: var(--space-8);
+}
+
+.inv-ask__body p {
+  font-size: var(--text-base);
+  color: var(--color-ink);
+  line-height: 1.75;
+}
+
+.inv-ask__body p + p {
+  margin-top: var(--space-6);
+}
+
+.inv-ask__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+/* ============================================================
+   SECTION 9 — CONTACT FORM
+   ============================================================ */
+.inv-contact {
+  background-color: var(--color-ink);
+  padding: var(--space-24) var(--space-6);
+}
+
+.inv-contact__inner {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.inv-contact__headline {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .inv-contact__headline {
+    font-size: var(--text-4xl);
+  }
+}
+
+.inv-contact__sub {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-top: var(--space-4);
+}
+
+.investors-form {
+  max-width: 520px;
+  margin-top: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.investors-form .form-input,
+.investors-form .form-select,
+.investors-form textarea.form-input {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.investors-form .form-input::placeholder,
+.investors-form textarea.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.investors-form .form-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.investors-form .form-input:focus,
+.investors-form .form-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(232, 120, 10, 0.2);
+}
+
+.investors-form textarea.form-input {
+  min-height: auto;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* Dropdown caret in white-ish for dark bg */
+.investors-form .form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.5)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.inv-form__submit-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .inv-form__submit-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.inv-form__email {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+}
+
+.inv-form__error {
+  font-size: var(--text-sm);
+  color: var(--color-error);
+  min-height: 1em;
+}
+
+/* Success state */
+.inv-success {
+  text-align: center;
+  padding: var(--space-12) 0;
+}
+
+.inv-success__check {
+  display: block;
+  margin: 0 auto var(--space-6);
+  color: var(--color-accent);
+}
+
+.inv-success__heading {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: #fff;
+}
+
+.inv-success__sub {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: var(--space-2);
+}
